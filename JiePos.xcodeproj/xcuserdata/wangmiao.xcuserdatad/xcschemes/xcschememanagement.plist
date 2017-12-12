@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>JPExtentionKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
+		<key>JPServiceNotification.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
+		<key>JiePos.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>964A82181E9F02970088C000</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>964A82311E9F02970088C000</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE2FD6711FB42AC3004F1685</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BEE448201FA1E8D700D97A4B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

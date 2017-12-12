@@ -1,0 +1,72 @@
+//
+//  PrefixHeader.pch
+//  JiePos
+//
+//  Created by Jason_LJ on 2017/4/13.
+//  Copyright © 2017年 Jason. All rights reserved.
+//
+
+#ifndef PrefixHeader_h
+#define PrefixHeader_h
+
+//  Macro
+#import "JPMacro_Define.h"
+#import "JPMacro_Color.h"
+#import "JPMacro_Url.h"
+#import "JPMacro_String.h"
+#import "JPConst.h"
+
+//  Category
+#import "UIColor+JPFormHex.h"
+#import "UIView+JPExtention.h"
+#import "NSString+JPExtention.h"
+#import "NSString+Utils.h"
+#import "UIImage+JPExtention.h"
+#import "NSDate+JPExtention.h"
+#import "UITextField+Helper.h"
+
+//  Pod文件
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import <Masonry/Masonry.h>
+#import <MJRefresh/MJRefresh.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <YYText/YYText.h>
+#import <YYModel/YYModel.h>
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#import <UMMobClick/MobClick.h>
+#import <FrameAccessor/FrameAccessor.h>
+
+// 引入JPush功能所需头文件
+#import <JPush/JPUSHService.h>
+// iOS10注册APNs所需头文件
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+#endif
+
+//  其他
+#import "JPNavigationController.h"
+#import "JPLoginViewController.h"
+#import "JPTabBarController.h"
+#import "JPTransferMJ.h"
+#import "JPDealDetailViewController.h"
+#import "JPNetworking.h"
+#import "JPUserEntity.h"
+#import "JPNetworkUtils.h"
+#import "JPRegisterModel.h"
+#import "JPNetTools1_0_2.h"
+#import "JPNoNewsView.h"
+#import "JPDealType.h"
+#import "KYSNormalPickerView.h"
+#import "JPUserInfoCell.h"
+#import "JPMerchantsModel.h"
+#import "XWScanImage.h"
+#import "JP_DealCell.h"
+
+#import "JPUserInfoHelper.h"
+#import "JPModifyInfoHelper.h"
+
+#import "JPAlbumManager.h"
+#import "IBUserInfoView.h"
+#import "IBUUIDManager.h"
+
+#endif /* PrefixHeader_h */
