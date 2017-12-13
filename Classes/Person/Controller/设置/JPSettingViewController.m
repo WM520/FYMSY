@@ -174,7 +174,12 @@ static NSString *settingCellReuseIdentifier = @"settingCell";
                 //  appType 1：安卓飞燕，2：安卓杰宝宝，3：iOS杰宝宝，4：iOS飞燕
                 [params setObject:@"4" forKey:@"appType"];
                 
-                NSString *UUID = [[IBUUIDManager getUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
+//                NSString *UUID = [[IBUUIDManager getUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
+                NSString *UUID = @"";
+                // 获取保存的uuid
+                if ([JP_UserDefults objectForKey:@"deviceUUID"]) {
+                    UUID = [JP_UserDefults objectForKey:@"deviceUUID"];
+                }
                 [params setObject:UUID forKey:@"deviceUUID"];
                 
                 NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];

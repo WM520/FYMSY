@@ -13,7 +13,7 @@
 #import "IBDataBase.h"
 #import "IBNewsModel.h"
 
-@interface NotificationService () 
+@interface NotificationService ()<AVSpeechSynthesizerDelegate>
 @property (nonatomic, strong) AVSpeechSynthesizer *synthesizer;
 @property (nonatomic, strong) void (^contentHandler)(UNNotificationContent *contentToDeliver);
 @property (nonatomic, strong) UNMutableNotificationContent *bestAttemptContent;
@@ -51,19 +51,27 @@
             voiceString = [NSString stringWithFormat:@"收款%@元！", model.transactionMoney];
         }
     }
+    //  数据本地存储
+    [[IBDataBase sharedDataBase] addModel:model];
     //  语音合成
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
+    self.synthesizer.delegate = self;
     AVSpeechUtterance *speechUtterance = [AVSpeechUtterance speechUtteranceWithString:voiceString];
+    
     //设置语言类别（不能被识别，返回值为nil）
     speechUtterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"zh-CN"];
     //设置语速快慢
     speechUtterance.rate = 0.55;
+    [self.synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
     //语音合成器会生成音频
     [self.synthesizer speakUtterance:speechUtterance];
     
-    //  数据本地存储
-    [[IBDataBase sharedDataBase] addModel:model];
+
     
+    
+}
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance
+{
     self.contentHandler(self.bestAttemptContent);
 }
 

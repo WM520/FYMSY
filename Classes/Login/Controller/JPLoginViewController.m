@@ -453,13 +453,14 @@
 //                            NSLog(@"%@ - %ld", iAlias, seq);
 //                        } seq:0];
                         
-                        NSString *UUID = [[IBUUIDManager getUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
-//                        UUID = [UUID substringToIndex:10];
-                        [JPUSHService setAlias:UUID completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
-                            NSLog(@"%@ - %ld", iAlias, seq);
-                        } seq:0];
-                        
                         if ([JP_UserDefults objectForKey:@"deviceToken"]) {
+                            
+                            NSString *UUID = [[JP_UserDefults objectForKey:@"deviceToken"] substringToIndex:30];
+                            [JP_UserDefults setObject:UUID forKey:@"deviceUUID"];
+                            //                        UUID = [UUID substringToIndex:10];
+                            [JPUSHService setAlias:UUID completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+                                NSLog(@"%@ - %ld", iAlias, seq);
+                            } seq:0];
                             //  友盟Alias上传服务器
                             NSMutableDictionary *parameters = @{}.mutableCopy;
                             [parameters setObject:merchantNo forKey:@"alias"];
@@ -467,7 +468,6 @@
                             //  appType 1：安卓飞燕，2：安卓杰宝宝，3：iOS杰宝宝，4：iOS飞燕
                             [parameters setObject:@"4" forKey:@"appType"];
                             
-                            NSString *UUID = [[IBUUIDManager getUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
 //                            UUID = [UUID substringToIndex:10];
                             [parameters setObject:UUID forKey:@"deviceUUID"];
                             
