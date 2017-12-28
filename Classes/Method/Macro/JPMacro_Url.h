@@ -15,21 +15,21 @@
 
 //// !!!:测试环境   http://59.56.101.183:11830
 ////  极光推送alias
-static NSString *const ib_JPushAliasUrl = @"http://139.196.226.55:8083/cpay-acps-push/fyMchnt/ios/login";
+//static NSString *const ib_JPushAliasUrl = @"http://139.196.226.55:8083/cpay-acps-push/fyMchnt/ios/login";
 ////  退出登录
-static NSString *const ib_JPushLogoutUrl = @"http://139.196.226.55:8083/cpay-acps-push/fyMchnt/ios/logout";
+//static NSString *const ib_JPushLogoutUrl = @"http://139.196.226.55:8083/cpay-acps-push/fyMchnt/ios/logout";
 
 // !!!:生产环境
 //  极光推送alias
-//static NSString *const ib_JPushAliasUrl = @"http://59.56.101.183:11830/cpay-acps-push/fyMchnt/ios/login";
+static NSString *const ib_JPushAliasUrl = @"http://59.56.101.183:11830/cpay-acps-push/fyMchnt/ios/login";
 //  退出登录
-//static NSString *const ib_JPushLogoutUrl = @"http://59.56.101.183:11830/cpay-acps-push/fyMchnt/ios/logout";
+static NSString *const ib_JPushLogoutUrl = @"http://59.56.101.183:11830/cpay-acps-push/fyMchnt/ios/logout";
 
 
 // !!!: 生产环境
-//#define JPServerUrl @"http://wx.jiepos.com/jpay-spmp/"
+#define JPServerUrl @"http://wx.jiepos.com/jpay-spmp/"
 // !!!: 测试服务器
-#define JPServerUrl @"http://139.196.226.55:8079/jpay-spmp/"
+//#define JPServerUrl @"http://139.196.226.55:8079/jpay-spmp/"
 // !!!: 本地测试接口
 //#define JPServerUrl @"http://192.168.14.110:8080/jpay-spmp/"
 
