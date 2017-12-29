@@ -56,7 +56,7 @@
         //categories 必须为nil
         [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert) categories:nil];
     }
-    [JPUSHService setupWithOption:launchOptions appKey:@"19c2762c254577cf78bd8365" channel:@"Publish channel" apsForProduction:YES];
+    [JPUSHService setupWithOption:launchOptions appKey:JPPUSHAppKey channel:@"apple store" apsForProduction:YES];
     
     // !!!: 初始化友盟统计
     [self handleUMMobClick];

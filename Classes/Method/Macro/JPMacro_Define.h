@@ -101,8 +101,10 @@ static NSString *const JP_UMAppSecret = @"ee5cbeo2lyv4nkrf7pwuinvbnszqwfct";
 static NSString *const JP_UMessageAliasType = @"tenantsNumber";
 
 // !!!: 友盟统计
-static NSString *const JP_UMMobClickAppKey = @"5976f65404e2053727000b6f";
-
+//static NSString *const JP_UMMobClickAppKey = @"5976f65404e2053727000b6f";
+static NSString *const JP_UMMobClickAppKey = @"5900578e677baa5a60000e09";
+// 极光推送
+static NSString *const JPPUSHAppKey = @"19c2762c254577cf78bd8365";
 // !!!: 科大讯飞语音播报
 static NSString *const JP_MSCAppKey = @"59083cc6";
 
